@@ -1,8 +1,6 @@
 import { Server, Socket } from "socket.io";
 //In the TypeScript code, we import the Server and Socket types from the "socket.io" module.
-import getAllData from '../controller/controller'
-import getAverage from '../controller/controller'
-import getSlippage from '../controller/controller'
+import getAllFunctions from '../controller/controller'
 
 function handleSocketIO(io: Server){
     io.on("connection", (socket: Socket) => {
@@ -14,19 +12,19 @@ function handleSocketIO(io: Server){
         
         //quotes endpoint
         socket.on("getQuotes", async () => {
-            const data = await getAllData();
+            const data = await getAllFunctions.getAllData();
             socket.emit("quotes", data);
         });
         
         //average endpoint
         socket.on("getAverage", async () => {
-            const average = await getAverage();
+            const average = await getAllFunctions.getAverage();
             socket.emit("average", { value: average });
         });
         
         //slippage endpoint
         socket.on("getSlippage", async () => {
-            const slippageData = await getSlippage();
+            const slippageData = await getAllFunctions.getSlippage();
             socket.emit("slippage", slippageData);
         });
     });

@@ -95,13 +95,13 @@ const getSlippage = async() => {
   const dolarhoy_data = await getDataFromDolarhoy();
   const cronista_data = await getDataFromCronista();
 
-  const ambito_buy_price = ambito_data?.buy_price;
-  const dolarhoy_buy_price = dolarhoy_data?.buy_price;
-  const cronista_buy_price = cronista_data?.buy_price;
+  const ambito_buy_price = ambito_data?.buy_price ?? 0;
+  const dolarhoy_buy_price = dolarhoy_data?.buy_price ?? 0;
+  const cronista_buy_price = cronista_data?.buy_price ?? 0;
 
-  const ambito_sell_price = ambito_data?.sell_price;
-  const dolarhoy_sell_price = dolarhoy_data?.sell_price;
-  const cronista_sell_price = cronista_data?.sell_price;
+  const ambito_sell_price = ambito_data?.sell_price ?? 0;
+  const dolarhoy_sell_price = dolarhoy_data?.sell_price ?? 0;
+  const cronista_sell_price = cronista_data?.sell_price ?? 0;
 
   const average = await getAverage();
   const average_buy_price = average?.average_buy_price;
@@ -125,4 +125,8 @@ const getSlippage = async() => {
   return {ambitoData, dolarhoyData, cronistaData};
 };
 
-export default { getAllData, getAverage, getSlippage };
+export default {
+   getAllData, 
+   getAverage, 
+   getSlippage 
+};
