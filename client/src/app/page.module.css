@@ -1,0 +1,36 @@
+.app{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+  }
+  .quotes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 10px;
+    height: 320px;
+  }
+  .cronista{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    border: 1px solid black;
+    border-radius: 8px;
+  }
+  .heading{
+    padding-left: 10px;
+  }
+  .average{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    margin-left: 10px;
+    border: 1px solid black;
+    border-radius: 8px;
+  }
+  .buy{
+    padding-bottom: 5px;
+  }
+  .loading{
+    padding-left: 10px;
+  }
