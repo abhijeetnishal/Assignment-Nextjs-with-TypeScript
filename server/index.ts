@@ -20,8 +20,10 @@ import handleSocketIO from './route/route';
 // Define the WebSocket route
 handleSocketIO(io);
 
+
 // Start the server
 const port = process.env.PORT || 4000;
+
 server.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
