@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
-  "scripts": {
-    "postinstall": "npm install -g ts-node",
+  "scripts": { 
     "build": "tsc",
     "start": "ts-node index.ts"
   },
