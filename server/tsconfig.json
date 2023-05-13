@@ -2,11 +2,11 @@
     "compilerOptions": {
       "lib": ["ES6"],
       "module": "commonjs",
-      "target": "ES6",
+      "target": "esnext",
       "moduleResolution": "node",
       "esModuleInterop": true,
       "strict": true,
-      "outDir": "./dist"
+      "outDir": "dist"
     },
     "exclude": ["node_modules"]
   }
