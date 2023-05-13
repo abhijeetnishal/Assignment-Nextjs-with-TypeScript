@@ -31,3 +31,5 @@ app.get('/', (req: Request, res: Response) => {
     //These Request and Response types are used to provide type information for the req and res parameters in the route handler.
     res.status(200).json('Server is Live');
 });
+
+export default app;
